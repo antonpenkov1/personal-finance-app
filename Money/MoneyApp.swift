@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct MoneyApp: App {
-    let persistenceController = PersistenceController.shared
-
+    @State private var categories = Categories.sampleData
+    @State private var currency = Currency.sampleData
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MainView(categories: $categories, currency: $currency)
         }
     }
 }
