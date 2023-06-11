@@ -15,6 +15,7 @@ struct NewSpendingView: View {
         VStack{
             TextField("Type amount", text: $oneNewSpending)
                 .frame(width: 300, height: 50)
+                .foregroundColor(category.theme.accentColor)
                 .padding(.top, 10)
                 .padding(.bottom, 5)
                 .padding(.leading, 20)
